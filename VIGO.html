@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title> Dealing with VIGO </title>
+<style>
+.vigo{
+float:right;
+}
+span{
+color:green;
+
+}
+.my_btn{
+background-color:lightGreen;
+padding:5px;
+border:2px solid white;
+border-radius:10px;
+}
+
+
+
+.my_btn2{
+background-color:white;
+padding:5px;
+border:2px solid white;
+border-radius:10px;
+}
+
+.my_btn3{
+background-color:lightGreen;
+padding:5px;
+border:2px solid white;
+border-radius:10px;
+}
+
+.my_btn4{
+background-color:white;
+padding:5px;
+border:2px solid white;
+border-radius:10px;
+color:black;
+}
+.one{
+display:flex;
+margin:50px;
+}
+.two{
+display:flex;
+margin:40px;
+}
+.three{
+
+margin:40px;
+}
+
+a{
+text-decoration:none;
+}
+
+</style>
+
+<script> 
+
+function myFunction(){
+
+}
+
+</script>
+
+</head>
+<body>
+
+
+
+<div class="container"> 
+     <img style="width:200px;height:80px;" src="data:image/png;base64,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 " alt="vigo">
+  <div class="vigo">
+    
+      <a style=margin-right:5px; href=""> home </a> 
+      <a style=margin-right:5px; href=""> contact </a>
+      <a style=margin-right:5px; href=""> about</a>
+      <a style=margin-right:5px; href=""> help</a>
+
+  </div> 
+
+ <div style="display:flex;" class="head">
+
+ <div class="head1">
+ <h1 style=":font-size:100px;"> Dealing With <span> VIGO </span></h1>
+
+<p > <pre>if you are looking for a protein that won't bloat your tummy and does not look like 
+sand and taste like chalk,then  VIGO PROTEIN  is for you. WE strongly encourage you
+to read more about  this product on this page before buying!</pre>  </p>
+
+
+
+<button class="my_btn" onclick="myfunction()"> <a href=" https://themeforest.net/item/vigohealth-supplement-landing-page-html-template/20927753"> PRODUCT DETAILS </a></button> </div>
+
+<div  class="vigo2"> 
+<img style="width:800px;height:auto;" src="https://themeim.com/demo/vigo/demo/vigo-green/img/slider-img.jpg " alt="vigo">
+</div>
+
+
+</div>
+
+
+
+<div style="width:100%;height:200px;background-color:lightGreen;"  class="parent">
+    
+   <div class="one">
+
+      <img style="width:150px;height:250px;padding:10px;" src="  https://themeim.com/demo/vigo/demo/vigo-green/img/call-to-action-img.png" alt="img">
+
+   <div class="two">
+      <p> <h2>Get your natural <br> 
+        supplement with most Powerfull all in one formula </h2>  </p>
+  <div class="three">
+      <button class="my_btn2" onclick="myfunction()"> <a href=""> know more </a></button>
+    </div>
+   </div>
+  </div>
+</div>
+
+
+<div > 
+<div class="bg2">
+
+<h3 style="text-align:center;color:lightGreen;"> <i> four amazing </i></h3>
+<div class="bg3">
+<h2 style="text-align:center;"> <b>Supplement in One </b> </h2>
+
+
+</div>
+</div>
+</div>
+
+<div style="justify-content:space-around; display:flex;"class="supplements">
+ 
+  <div class="build">  
+  <img style="width:50px;height:50px;"src="https://static.thenounproject.com/png/1166850-200.png" alt="img" >
+  <h2>Calorie build up </h2> 
+  <p>hriwuhruirhuw</p>
+  </div>
+ 
+
+
+   <div class="body">
+   <img style="width:50px;height:50px;" src="https://static.thenounproject.com/png/1166850-200.png  " alt="img2" >
+  <h2>Fit the body </h2>
+  <p>ehruiwhriosrjoirt</p>
+  </div>
+
+
+   <div class="grow"> 
+   <img style="width:50px;height:50px;" src="https://static.thenounproject.com/png/1166850-200.png" alt="img" > 
+   <h2> Energy Grow Up </h2>
+   <p> iuh3yr87w3iuhfri</p>
+   </div>
+
+
+
+   <div  class="routine"> 
+   <img style="width:50px;height:50px;"src="https://static.thenounproject.com/png/1166850-200.png" alt="img" >
+   <h2>Regular Routine </h2>
+   <p>lshfuiwshfisujf</p>
+   </div>
+
+</div>
+
+<h3 style="text-align:center;color:lightGreen;"> <i> one step </i></h3>
+<h2 style="text-align:center;"> <b>Supplement </b> </h2>
+
+<div style="display:flex;justify-content:space-around;"class="protein"> 
+    <div class="p_img"> 
+   <img  width:"100px;height:100px;" src="https://themeim.com/demo/vigo/demo/vigo-green/img/services-img.jpg" alt="protein" ></div>
+ 
+   <div> <h3 style="color:lightGreen;"> <i> one step </i></h3>
+   <h2 > <b>Body is just click away</b> </h2>
+   
+    <div style="display:flex;" class="part2">
+
+ <div style="padding:5px;border-left:3px solid green;" class="side">  <p> <b>Increased Energy </b></p>
+        <p> jaswhneorfisshfewnewk<br>keghfessuihfbauswfjhjaswhneorfisshfewnewk<br>keghfessuihfbauswfjh</p> 
+
+      <div  class="side2"><p > <b> Body Builder </b></p>
+        <p> jaswhneorfisshfewnewk<br>keghfessuihfbauswfjhjaswhneorfisshfewnewk<br>keghfessuihfbauswfjh</p> </div> </div> 
+
+
+     <div style="padding:5px;border-left:3px solid green;" class="side">  <p> <b>Weight Loss </b></p>
+        <p> jaswhneorfisshfewnewk<br>keghfessuihfbauswfjhjaswhneorfisshfewnewk<br>keghfessuihfbauswfjh</p> 
+
+      <div class="side2"><p > <b>More Energy </b></p>
+        <p> jaswhneorfisshfewnewk<br>keghfessuihfbauswfjhjaswhneorfisshfewnewk<br>keghfessuihfbauswfjh</p> </div> </div>
+ 
+  </div>
+<div style="display:flex;" class="part3">
+
+<b style="margin:5px;">***Black Friday offer on This Month <span> 10% OFF </span><br> on this <span> Whey Protein </span> </b>
+<button class="my_btn3" onclick="myfunction()"> <a href=""> know more </a></button></div>
+
+</div>
+</div>
+
+ <div style="background-color:lightGreen;display:flex; width:100%; height:350px;" class="works">
+    
+   
+   <iframe style="padding:20px;" width="560" height="315" src="https://www.youtube.com/embed/izOiy97j5pg?si=mjhGaG7IAvuz3oWb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div class="works1">  
+ <div style="padding:20px; color:white;" class="link"><h1> HOW OUR SUPPLEMENT WORKS: </h1>
+    
+    <p> You might be hearing the term <span> "whey protein" </span> ery frequently around yourself,<br> but do you know what whey protein actually is? <br> Let me tell you whey protein is one of the two proteins found in cow's milk. </p></div>
+
+<button class="my_btn4" onclick="myfunction()"> <a href="https://themeim.com/demo/vigo/demo/vigo-green/# "> DISCOVER MORE </a></button>
+</div>
+</div>
+
+
+<h3 style="text-align:center;color:lightGreen;"> <i> one step </i></h3>
+<h2 style="text-align:center;"> <b>Supplement Features </b> </h2>
+
+<div style="display:flex;justify-content:space-around;" class="bottom_head">
+
+<div style="text-align:right;" class="bottom1">
+<h2> Supplements Elements Text </h2> <img style="width:20px;height:20px;" src="https://themeim.com/demo/vigo/demo/vigo-green/img/call-to-action-img.png " alt="img">
+<p> skegruwsedjkbfuiwefkjfskwehseff </p>
+
+<div style="text-align:right;" class="bottom2">
+<h2> Supplements Elements Text </h2> <img style="width:20px;height:20px;"src="https://themeim.com/demo/vigo/demo/vigo-green/img/call-to-action-img.png " alt="img">
+<p> skegruwsedjkbfuiwefkjfskwehseff </p>
+
+<div style="text-align:right;" class="bottom3">
+<h2> Supplements Elements Text  <img style="width:20px;height:20px;" src="https://themeim.com/demo/vigo/demo/vigo-green/img/call-to-action-img.png " alt=""> </h2>
+<p> skegruwsedjkbfuiwefkjfskwehseff </p>
+</div> </div> </div>
+
+<div class="bottom_middle">
+<img style= width":300px;height:400px;" src=" https://themeim.com/demo/vigo/demo/vigo-green/img/product-features-big-img.png" alt="img" > 
+</div>
+
+
+<div style="text-align:left;" class="bottom4">
+<h2> Supplements Elements Text </h2> <img style="width:20px;height:20px;"src="https://themeim.com/demo/vigo/demo/vigo-green/img/call-to-action-img.png " alt="img">
+<p> skegruwsedjkbfuiwefkjfskwehseff </p>
+
+<div style="text-align:left;" class="bottom5">
+<h2> Supplements Elements Text </h2> <img style="width:20px;height:20px;" src="https://themeim.com/demo/vigo/demo/vigo-green/img/call-to-action-img.png " alt="img">
+<p> skegruwsedjkbfuiwefkjfskwehseff </p>
+
+<div style="text-align:left;" class="bottom6">
+<h2> Supplements Elements Text </h2> <img style="width:20px;height:20px;" src="https://themeim.com/demo/vigo/demo/vigo-green/img/call-to-action-img.png " alt=""> 
+<p> skegruwsedjkbfuiwefkjfskwehseff </p>
+</div> </div> </div> 
+
+</div>
+
+
+
+
+
+</div>
+</div>
+</div>
+</body>
+</html>
